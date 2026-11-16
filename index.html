@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>까치 KKACHI — 팝미팅 커뮤니티 앱 · Pop-Meeting Community App</title>
+<meta name="description" content="지금 가장 가까운 취향의 번개 모임. 까치(KKACHI) 팝미팅 커뮤니티 앱 브랜드 페이지 — BRAND STORY, MAP, POP MEETING, FEED.">
+<meta property="og:title" content="까치 KKACHI — 팝미팅 커뮤니티 앱">
+<meta property="og:description" content="지금 가장 가까운 취향의 번개 모임, 까치(KKACHI) 팝미팅 커뮤니티 앱.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./src/styles.css">
+</head>
+<body data-surface="sodium">
+<a class="skip-link" href="#main">본문으로 건너뛰기 · Skip to content</a>
+
+<header class="site-header" role="banner" data-surface="sodium" id="site-header">
+  <div class="grid header-grid">
+    <a class="logo-link" href="#/" aria-label="까치 KKACHI 홈으로 이동" id="header-logo-link">
+      <img class="logo-mark" src="./assets/aistudio/kkachi_7b3a40bf.jpg" alt="" width="28" height="28">
+      <span class="logo-wordmark">까치</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary" id="header-nav"></nav>
+    <div class="header-actions-desktop">
+      <a class="nav-link t-micro u-anim" href="#/profile" id="header-profile-link">PROFILE</a>
+      <a class="btn-primary btn-sm t-small" href="#/app" id="header-app-btn"><span>GET A APP</span></a>
+    </div>
+    <div class="menu-btn-wrap">
+      <button type="button" class="menu-btn t-micro" id="menu-open-btn" aria-expanded="false" aria-controls="menu">(MENU)</button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menu" role="dialog" aria-modal="true" aria-label="Navigation menu" data-surface="sodium">
+  <div class="menu-overlay-top grid">
+    <span class="col-1-3 t-micro">(MENU · 까치)</span>
+    <div class="menu-btn-wrap">
+      <button type="button" class="menu-btn t-micro" id="menu-close-btn">(CLOSE)</button>
+    </div>
+  </div>
+  <div class="grid">
+    <nav class="menu-overlay-links col-full" aria-label="Mobile navigation" id="menu-nav"></nav>
+    <div class="menu-overlay-footer col-full">
+      <button type="button" class="btn-text t-small u-anim" id="motion-toggle-mobile" aria-pressed="true">(Motion: on)</button>
+      <a class="btn-text t-small u-anim" href="#/profile" id="menu-profile-btn">PROFILE</a>
+      <a class="btn-primary t-small" href="#/app" id="menu-app-btn"><span>GET A APP</span></a>
+    </div>
+  </div>
+</div>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="site-footer" role="contentinfo" data-surface="ink" id="site-footer"></footer>
+
+<button type="button" class="top-btn t-micro u-anim" id="top-btn" data-surface="sodium">(TOP)</button>
+
+<div id="tip" role="tooltip" class="t-micro"></div>
+<canvas id="trail-canvas" aria-hidden="true"></canvas>
+<canvas id="wipe-canvas" aria-hidden="true"></canvas>
+<script type="module" src="./src/main.ts"></script>
+</body>
+</html>
