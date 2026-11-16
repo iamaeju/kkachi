@@ -1,4 +1,5 @@
 import { DATA, type FeedPostItem } from "./data";
+import { subscribeLiveMeetups } from "./firebase-kkachi";
 import {
   BADGE_PALETTE,
   TRAIL_COLORS,
@@ -615,6 +616,26 @@ export function renderFeed(main: HTMLElement): void {
   const postCountEl = document.getElementById("feed-post-count")!;
   const followingEl = document.getElementById("feed-following-list")!;
   const filterBtns = Array.from(document.querySelectorAll("#feed-filter-bar [data-ftrack]"));
+
+  // 까치 앱(Firestore)에서 지금 열려있는 실제 모임을 실시간으로 가져와 사이드바에 표시
+  const liveSection = document.createElement("div");
+  liveSection.className = "feed-sidebar-card";
+  liveSection.innerHTML = `<p class="t-micro">(LIVE · 지금 열려있는 까치 모임)</p><div id="kkachi-live-list" class="t-small">불러오는 중...</div>`;
+  followingEl.parentElement!.insertAdjacentElement("afterend", liveSection);
+
+  const unsubscribeLiveMeetups = subscribeLiveMeetups((meetups) => {
+    const el = document.getElementById("kkachi-live-list");
+    if (!el) return;
+    el.innerHTML = meetups.length === 0
+      ? "<p>지금 열려있는 모임이 없어요.</p>"
+      : meetups.map((m) => `
+          <div style="padding:8px 0;border-bottom:1px solid #eee;">
+            <strong>${esc(m.title)}</strong><br>
+            <span class="t-micro">${esc(m.hostName)} · ${m.participants.length}/${m.capacity}명 · ${esc(m.address)}</span>
+          </div>
+        `).join("");
+  });
+  state.routeCleanup.push(unsubscribeLiveMeetups);
 
   const msgDialog = document.getElementById("feed-msg-dialog") as HTMLDialogElement;
   const msgTitle = document.getElementById("feed-msg-title")!;
