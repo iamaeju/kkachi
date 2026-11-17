@@ -322,7 +322,7 @@ export const DATA = {
       org: "을지로 테이프룸",
       city: "Seoul · 을지로",
       track: "sound",
-      bio: "을지로 4층 작업실에서 한국 70–90년대 시티팝과 앰비언트 바이닐을 모읍니다. 대화를 강요하지 않는 60분 리스닝 팝미팅을 엽니다. / Collects rare Korean ambient vinyl in Euljiro and hosts pressure-free 60-minute listening pop-meetings.",
+      bio: "을지로 4층 작업실에서 한국 70–90년대 시티팝과 앰비언트 바이닐을 모읍니다. 대화를 강요하지 않는 리스닝 팝미팅을 엽니다. / Collects rare Korean ambient vinyl in Euljiro and hosts pressure-free listening pop-meetings.",
       portrait: { pal: ["#A6C41D", "#323E07", "#0A0A0A", "#FFFFFF"], rows: ["00000000000000000000000000000000","00000000000000000000000000000000","00000000000222222222000000000000","00000000002222222222200000000000","00000000002222222222220000000000","00000000022222221122222000000000","00000000021111111112222200000000","00000000011111111112222200000000","00000000022212222113322200000000","00000000012211221111211100000000","00000000012211111111221100000000","00000000011211111111221000000000","00000000011111111112221000000000","00000000011221111112212000000000","00000000012222221122220000000000","00000000022222122222110000000000","00000000002222222221110000000000","00000000000222221111111100000000","00000000000012111111111100000000","00000000000121111111111111110000","00000000111111111111111111111100","00000011111211112111111111111110","00001111112121122221121111111110","00011111111111221112211111111110","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000","00000000000000000000000000000000"] }
     },
     {
@@ -409,7 +409,7 @@ export const DATA = {
   sessions: [
     { id: "p01", day: "d1", start: "10:00", end: "11:00", room: "seongsu", type: "Morning Walk", track: "walk", speakers: ["minji-han"], title: "성수 골목 모닝 드립 워크 · Seongsu Morning Walk", abstract: "오전 10시 성수 베이스캠프에서 만나 연무장길 뒷골목을 40분 걷고 필터 커피 한 잔으로 하루를 여는 팝미팅입니다. / Meet at 10am for a 40-minute Seongsu back-alley walk ending with hand-brewed coffee." },
     { id: "p02", day: "d1", start: "13:00", end: "14:30", room: "yeonnam", type: "Workshop", track: "craft", speakers: ["seoyeon-cho"], title: "라임 잉크 2도 리소 포스터 · Two-Ink Riso Pop", abstract: "까치 시그니처 차트뢰즈 라임과 먹색 잉크 두 가지로 나만의 동네 포스터를 찍어가는 90분 워크숍입니다. / Print your own neighborhood poster using KKACHI chartreuse-lime and obsidian black riso ink." },
-    { id: "p03", day: "d1", start: "15:00", end: "16:15", room: "seongsu", type: "Listening", track: "sound", speakers: ["doyun-kwon"], title: "오후의 시티팝 바이닐 60분 · Afternoon Vinyl 60", abstract: "말 없이 헤드폰과 스피커로 한 장의 앨범을 처음부터 끝까지 감상하고 한 줄 감상을 남기는 모임입니다. / Listen to one classic album side-to-side without small-talk pressure." },
+    { id: "p03", day: "d1", start: "15:00", end: "16:15", room: "seongsu", type: "Listening", track: "sound", speakers: ["doyun-kwon"], title: "오후의 시티팝 바이닐 · Afternoon Vinyl", abstract: "말 없이 헤드폰과 스피커로 한 장의 앨범을 처음부터 끝까지 감상하고 한 줄 감상을 남기는 모임입니다. / Listen to one classic album side-to-side without small-talk pressure." },
     { id: "p04", day: "d1", start: "18:30", end: "20:00", room: "euljiro", type: "Night Run", track: "night", speakers: ["junseo-baek"], title: "청계천–한강 5K 야간 러닝 · Night 5K Social Run", abstract: "초보자 페이스(6'30\"/km)로 함께 달리고 스트레칭 후 따뜻한 유자차를 나눕니다. / Beginner-friendly 5K night jog followed by warm tea and cool-down." },
     { id: "p05", day: "d1", start: "20:15", end: "21:30", room: "euljiro", type: "Cinema", track: "night", speakers: ["eunwoo-jang"], title: "을지로 옥상 단편 상영회 · Euljiro Rooftop Shorts", abstract: "서울의 밤을 다룬 독립 단편 3편을 옥상에서 함께 감상합니다. / Three independent short films celebrating Seoul after dusk on the rooftop screen." },
     { id: "p06", day: "d2", start: "10:00", end: "11:15", room: "hannam", type: "Coffee Tasting", track: "walk", speakers: ["jihoon-park"], title: "한남 중정 에스프레소 테이스팅 · Hannam Drip Flight", abstract: "3가지 산지의 싱글 오리진 커피를 비교 시음하며 가볍게 주말 아침을 깨웁니다. / Compare three single-origin brews in the Hannam courtyard garden." },
@@ -527,8 +527,8 @@ export const DATA = {
       joined: ["도", "태", "은", "백"],
       joinedCount: 9,
       extraCount: 4,
-      caption: "60분 동안 말없이 앨범 한 장 통째로 듣는 오후의 리스닝 팝미팅. 내향인 멤버분들 최애 코스!",
-      captionEn: "Zero small-talk 60-minute vinyl listening session — an introvert favorite.",
+      caption: "말없이 앨범 한 장 통째로 듣는 오후의 리스닝 팝미팅. 내향인 멤버분들 최애 코스!",
+      captionEn: "Zero small-talk vinyl listening session — an introvert favorite.",
       mediaKind: "vinyl",
       comments: [
         { author: "유나", text: "퇴근 후 머리가 맑아지는 최고의 한 시간이었습니다." }
@@ -544,7 +544,7 @@ export const DATA = {
     heroTimes: ["모임 10.00–21.30 KST", "Pop-meetings daily"],
     heroCycle: [
       { desktop: "KKACHI", mobile: ["KKA", "CHI"], caption: "(까치 — 지금 반가운 소식을 전하는 팝미팅 커뮤니티 · Click to morph)" },
-      { desktop: "POP!27", mobile: ["POP", "!27"], caption: "(POP MEETING — 가볍게 모였다 흩어지는 60분의 취향 번개)" },
+      { desktop: "POP!27", mobile: ["POP", "!27"], caption: "(POP MEETING — 가볍게 모였다 흩어지는 취향 번개)" },
       { desktop: "SEOUL", mobile: ["SEO", "UL"], caption: "(MAP — 성수 · 연남 · 을지로 · 한남 6개 스팟 실시간 오픈)" },
       {
         desktop: "", mobile: [], caption: "(까치 — 반가운 소식을 전하는 로고 · Click to morph)",
@@ -553,7 +553,7 @@ export const DATA = {
     ] as HeroCycleItem[],
     heroSplit: [
       { left: "", right: "거창한 약속 대신, 반가운 손님이 온다는 까치의 신호처럼" },
-      { left: "지금 내 반경 1km 안에서", right: "딱 60분만 취향을 나누는 팝미팅 커뮤니티" },
+      { left: "지금 내 반경 1km 안에서", right: "가볍게 취향을 나누는 팝미팅 커뮤니티" },
       { left: "까치 · KKACHI", right: "" },
       { left: "산책과 드립 커피, 바이닐 리스닝,", right: "리소그래피와 심야 러닝까지" },
       { left: "Seoul 6개 팝 스팟에서", right: "누구나 가볍게 열고, 혼자 와도 편안하게" }

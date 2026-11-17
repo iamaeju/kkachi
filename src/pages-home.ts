@@ -805,7 +805,7 @@ export function initPosterWall(): void {
       { text: "까치 · KKACHI SEOUL", indent: 0 },
       { text: "지금 가장 가까운 번개 모임", indent: 1 },
       { text: "Walk, Sound, Craft, Night", indent: 0 },
-      { text: "60분 단위의 가벼운 연결", indent: 2 }
+      { text: "짧고 가벼운 연결", indent: 2 }
     ],
     mr: [
       { text: "FRI 21 – SUN 23 MAY", indent: 1 },
