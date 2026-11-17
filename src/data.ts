@@ -3,6 +3,28 @@ export interface SplitLine {
   right: string;
 }
 
+export interface HeroCycleItem {
+  desktop: string;
+  mobile: string[];
+  caption: string;
+  logo?: boolean;
+  logoDesktop?: { cols: number; rows: number; cells: number[][] };
+  logoMobile?: { cols: number; rows: number; cells: number[][] };
+}
+
+// 까치 로고(검정 배경 + 노란연두 까치 심볼)를 히어로 캔버스의 가로세로 비율(데스크탑 45x9, 모바일 25x20)에
+// 맞춰 다운샘플링한 좌표. 텍스트 글리프와 같은 해상도로 그려지도록 캔버스 비율에 맞춰 따로 생성함.
+export const LOGO_PIXEL_GRID_DESKTOP = {
+  cols: 45,
+  rows: 9,
+  cells: [[25,1],[23,2],[24,2],[22,3],[23,3],[24,3],[20,4],[21,4],[22,4],[23,4],[20,5],[21,5],[22,5],[21,6],[22,6]] as number[][]
+};
+export const LOGO_PIXEL_GRID_MOBILE = {
+  cols: 25,
+  rows: 20,
+  cells: [[18,2],[19,2],[17,3],[18,3],[19,3],[17,4],[18,4],[19,4],[15,5],[16,5],[11,6],[12,6],[13,6],[14,6],[15,6],[16,6],[9,7],[10,7],[11,7],[12,7],[13,7],[14,7],[15,7],[16,7],[12,8],[13,8],[14,8],[15,8],[9,9],[10,9],[11,9],[12,9],[13,9],[14,9],[15,9],[4,10],[5,10],[6,10],[7,10],[8,10],[9,10],[10,10],[11,10],[12,10],[14,10],[15,10],[4,11],[5,11],[6,11],[7,11],[8,11],[9,11],[10,11],[11,11],[12,11],[14,11],[15,11],[9,12],[10,12],[11,12],[12,12],[14,12],[10,13],[11,13],[12,13],[10,14],[11,14],[10,15],[11,15],[10,16],[11,16],[11,17]] as number[][]
+};
+
 export interface TrackItem {
   id: string;
   label: string;
@@ -523,8 +545,12 @@ export const DATA = {
     heroCycle: [
       { desktop: "KKACHI", mobile: ["KKA", "CHI"], caption: "(까치 — 지금 반가운 소식을 전하는 팝미팅 커뮤니티 · Click to morph)" },
       { desktop: "POP!27", mobile: ["POP", "!27"], caption: "(POP MEETING — 가볍게 모였다 흩어지는 60분의 취향 번개)" },
-      { desktop: "SEOUL", mobile: ["SEO", "UL"], caption: "(MAP — 성수 · 연남 · 을지로 · 한남 6개 스팟 실시간 오픈)" }
-    ],
+      { desktop: "SEOUL", mobile: ["SEO", "UL"], caption: "(MAP — 성수 · 연남 · 을지로 · 한남 6개 스팟 실시간 오픈)" },
+      {
+        desktop: "", mobile: [], caption: "(까치 — 반가운 소식을 전하는 로고 · Click to morph)",
+        logo: true, logoDesktop: LOGO_PIXEL_GRID_DESKTOP, logoMobile: LOGO_PIXEL_GRID_MOBILE
+      }
+    ] as HeroCycleItem[],
     heroSplit: [
       { left: "", right: "거창한 약속 대신, 반가운 손님이 온다는 까치의 신호처럼" },
       { left: "지금 내 반경 1km 안에서", right: "딱 60분만 취향을 나누는 팝미팅 커뮤니티" },

@@ -235,6 +235,18 @@ function initHeroCanvas(): void {
 
   function getTargetLayout(idx: number) {
     const item = DATA.copy.heroCycle[idx];
+
+    if (item.logo) {
+      const grid = isMobile ? item.logoMobile : item.logoDesktop;
+      if (grid) {
+        return {
+          totalCols: grid.cols,
+          totalRows: grid.rows,
+          cells: grid.cells.map(([x, y]) => ({ x, y }))
+        };
+      }
+    }
+
     const lines = isMobile ? item.mobile : [item.desktop];
     const layout = layoutGlyphLines(lines, 2, true);
     const totalCols = isMobile ? Math.max(25, layout.cols) : Math.max(45, layout.cols);
