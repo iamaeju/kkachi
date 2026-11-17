@@ -1635,6 +1635,16 @@ export function renderAppPage(main: HTMLElement): void {
           <h1 class="t-h1" tabindex="-1">GET A APP · 까치 앱 시작하기</h1>
           <p class="t-lead tnum" style="margin-top:16px;">오픈 베타 잔여 초대권 ${totalLeft} / ${DATA.meta.capacity}석 · ${totalLeft} beta spots remaining.</p>
         </div>
+        <div class="col-full store-badge-row" style="display:flex;gap:16px;flex-wrap:wrap;margin:24px 0;">
+          <a class="store-badge-btn" href="https://apps.apple.com/app/id6833336153" target="_blank" rel="noopener noreferrer">
+            <span class="t-micro">Download on the</span>
+            <strong class="t-lead">App Store</strong>
+          </a>
+          <span class="store-badge-btn is-disabled" aria-disabled="true">
+            <span class="t-micro">준비 중 · Coming soon</span>
+            <strong class="t-lead">Google Play</strong>
+          </span>
+        </div>
         <div class="col-full" id="tickets-capacity-wrap"></div>
         <div class="col-full tier-list" id="tickets-tier-list">
           ${DATA.tickets.map((t) => {
