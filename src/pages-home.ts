@@ -1011,6 +1011,11 @@ export function renderBrandStory(main: HTMLElement): void {
             <span class="t-lead fw-600">취향, 라이프 스타일을 공유하다.</span>
             <span class="t-micro">Share your taste &amp; lifestyle anywhere.</span>
           </div>
+          <div class="brand-keyword-row" aria-label="Brand keywords">
+            <span class="brand-keyword-chip">#취향</span>
+            <span class="brand-keyword-chip">#디자인</span>
+            <span class="brand-keyword-chip">#감각</span>
+          </div>
         </div>
       </div>
 

@@ -927,6 +927,22 @@ html:not(.motion-on) .btn-primary:not([aria-disabled="true"]):hover::before {
   gap: var(--s2) var(--s4);
 }
 
+.brand-keyword-row {
+  margin-top: var(--s3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+}
+.brand-keyword-chip {
+  border: var(--rule-strong);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  background: var(--lime-vivid);
+  color: var(--ink);
+}
+
 .brand-who-card {
   border: var(--rule);
   padding: var(--s4);
